@@ -5,7 +5,8 @@
 	<key>beforeRunningCommand</key>
 	<string>saveActiveFile</string>
 	<key>command</key>
-	<string>#!/usr/bin/env sh
+	<string>#!/bin/bash
+[[ -e "$TM_PROJECT_DIRECTORY/.rvmrc" ]] &amp;&amp; . "$TM_PROJECT_DIRECTORY/.rvmrc"
 cat &lt;&lt;'RUBYEOF' &gt; /tmp/cucumber-$$.rb
 
 require ENV['TM_BUNDLE_SUPPORT'] + "/lib/cucumber/mate/feature_helper"

@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>saveActiveFile</string>
 	<key>command</key>
-	<string>#!/usr/bin/env sh
+	<string>#!/bin/bash
 cat &lt;&lt;'RUBYEOF' &gt; /tmp/cucumber-$$.rb
 
 require ENV['TM_BUNDLE_SUPPORT'] + "/lib/cucumber/mate/feature_helper"
@@ -27,7 +27,7 @@ ${TM_RUBY:-ruby} /tmp/cucumber-$$.rb; exit_status=$?; rm /tmp/cucumber-$$.rb; ex
 	<key>output</key>
 	<string>showAsHTML</string>
 	<key>scope</key>
-	<string>text.gherkin.feature</string>
+	<string>text.gherkin.feature, source.ruby.rspec.cucumber.steps</string>
 	<key>uuid</key>
 	<string>7B92D0E5-FCF2-4CE0-A900-821E7EA000C7</string>
 </dict>
